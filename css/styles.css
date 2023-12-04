@@ -5,10 +5,16 @@
     --accent-cl: #2196f3;
     --main-txt-cl: #757575;
     --secondary-txt-cl: #212121;
+    --footer-txt-cl: rgba(255, 255, 255, 0.60);
+    --spare-txt-cl: #FFF;
     /* bacgraund-colors */
     --darc-bg-cl: #2f303a;
     --main-bg-cl: #fff;
     --secondary-bg-cl: #f5f4fa;
+    --accent-bg-cl: #2196F3;
+    /* grid items */
+    --items: 1;
+    --indent: 30px;
 }
 
 body {
@@ -38,6 +44,8 @@ p {
 
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
@@ -63,6 +71,17 @@ img {
 .link:hover,
 .link:focus {
     color: #2196F3;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--indent);
+}
+
+.grid-item {
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
 /* =====================
@@ -182,13 +201,13 @@ img {
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-color: #C4C4C4;
-    background-image: url(../images/hero/Img.jpg), url(../images/hero/Img\ Overlay.jpg);
+    background-color: rgba(47, 48, 58, 0.40);
+    background-image: url(../images/hero/Img.jpg);
 }
 
 .title {
     width: 696px;
-    color: #FFF;
+    color: var(--spare-txt-cl);
     text-align: center;
     font-family: var(--main-font);
     font-size: 44px;
@@ -201,14 +220,14 @@ img {
 }
 
 .btn {
-    background-color: #2196F3;
+    background-color: var(--accent-bg-cl);
     min-width: 152px;
     min-height: 30px;
     width: 200px;
     height: 50px;
     flex-shrink: 0;
     padding: 10px, 32px;
-    color: #FFF;
+    color: var(--spare-txt-cl);
     text-align: center;
     font-size: 16px;
     font-weight: 700;
@@ -224,7 +243,7 @@ img {
 .btn:hover,
 .btn:focus {
     border-radius: 4px;
-    background-color: #2196F3;
+    background-color: var(--accent-bg-cl);
 }
 
 /* ======================
@@ -372,10 +391,11 @@ img {
     font-weight: 400;
     letter-spacing: 0.48px;
 }
-
-/* ===========================
-== section Portfolio        
-=============================*/
+/* 
+|===========================
+|== section Portfolio        
+|===========================
+*/
 .portfolio {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -413,14 +433,14 @@ img {
     width: 73px;
     height: 38px;
     border-radius: 4px;
-    background: #2196F3;
-    color: #FFF;
+    background-color: var(--accent-bg-cl);
+    color: var(--spare-txt-cl);
 }
 
 .portfolio-all-btn:hover,
 .portfolio-all-btn:focus {
     border-radius: 4px;
-    background: #2196F3;
+    background-color: var(--accent-bg-cl);
     width: 73px;
     height: 38px;
     flex-shrink: 0;
@@ -441,23 +461,17 @@ img {
 .portfolio-btn:hover,
 .portfolio-btn:focus {
     border-radius: 4px;
-    background: #F5F4FA;
+    background: var(--secondary-bg-cl);
 }
 
 .img-portfolio-list {
-    padding: 0;
     margin-top: 56px;
-    margin-left: -30px;
-    margin-right: 0;
-    margin-bottom: -30px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    --indent: 30px;
 }
 
 .img-portfolio-item {
-    flex-basis: calc(100%/3-30px);
-    margin-left: 30px;
+    --indent: 30px;
+    --items: 3;
 }
 
 
@@ -479,9 +493,11 @@ img {
     letter-spacing: 0.48px;
 }
 
-/* ======================
-======footer         
------------------------ */
+/* 
+    |======================
+    |  footer         
+    |======================
+*/
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -494,7 +510,7 @@ img {
 }
 
 .address-desc {
-    color: #FFF;
+    color: var(--spare-txt-cl);
     font-family: Roboto;
     font-size: 14px;
     font-weight: 400;
@@ -504,7 +520,7 @@ img {
 }
 
 .footer-link {
-    color: rgba(255, 255, 255, 0.60);
+    color: var(--footer-txt-cl);
     font-family: var(--main-font);
     font-size: 14px;
     font-weight: 400;
@@ -523,7 +539,7 @@ img {
 }
 
 .footer-logo-part {
-    color: #FFF;
+    color: var(--spare-txt-cl);
     font-family: var(--secondary-font);
     font-size: 26px;
     font-weight: 700;
