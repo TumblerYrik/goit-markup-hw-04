@@ -15,6 +15,9 @@
     /* grid items */
     --items: 1;
     --indent: 30px;
+    /* градієнт */
+    --start-color: #C4C4C4;
+    --end-color: #2F303A66 -40;
 }
 
 body {
@@ -201,9 +204,15 @@ img {
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-color: rgba(47, 48, 58, 0.40);
-    background-image: url(../images/hero/Img.jpg);
+    background-color: #C4C4C4;
 }
+
+.overlay {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image:  url(../images/hero/Img.jpg), url(../images/hero/Img\ Overlay.jpg);
+    }
 
 .title {
     width: 696px;
@@ -391,6 +400,7 @@ img {
     font-weight: 400;
     letter-spacing: 0.48px;
 }
+
 /* 
 |===========================
 |== section Portfolio        
