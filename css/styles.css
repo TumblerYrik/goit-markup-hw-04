@@ -5,19 +5,19 @@
     --accent-cl: #2196f3;
     --main-txt-cl: #757575;
     --secondary-txt-cl: #212121;
-    --footer-txt-cl: rgba(255, 255, 255, 0.60);
-    --spare-txt-cl: #FFF;
+    --footer-txt-cl: rgba(255, 255, 255, 0.6);
+    --spare-txt-cl: #fff;
     /* bacgraund-colors */
     --darc-bg-cl: #2f303a;
     --main-bg-cl: #fff;
     --secondary-bg-cl: #f5f4fa;
-    --accent-bg-cl: #2196F3;
+    --accent-bg-cl: #2196f3;
     /* grid items */
     --items: 1;
     --indent: 30px;
     /* градієнт */
-    --start-color: #C4C4C4;
-    --end-color: #2F303A66 -40;
+    --start-color: #c4c4c4;
+    --end-color: #2f303a66 -40;
 }
 
 body {
@@ -73,7 +73,7 @@ img {
 
 .link:hover,
 .link:focus {
-    color: #2196F3;
+    color: #2196f3;
 }
 
 .grid {
@@ -93,7 +93,7 @@ img {
 .header {
     padding: 32px, 15px, 32px, 15px;
     background: #fff;
-    border-bottom: 1px solid #ECECEC;
+    border-bottom: 1px solid #ececec;
 }
 
 .heder-container {
@@ -118,7 +118,6 @@ img {
     margin-right: 50px;
     margin-bottom: 32px;
     margin-left: 0;
-
 }
 
 .navigation-item:last-child {
@@ -152,7 +151,7 @@ img {
 }
 
 .nav-title {
-    color: #2196F3;
+    color: #2196f3;
     font-family: var(--main-font);
     font-size: 14px;
     font-weight: 500;
@@ -204,15 +203,18 @@ img {
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-color: #C4C4C4;
+    background-color: #c4c4c4;
 }
 
 .overlay {
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    background-image:  url(../images/hero/Img.jpg), url(../images/hero/Img\ Overlay.jpg);
-    }
+    background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/hero/Img.jpg);
+}
 
 .title {
     width: 696px;
@@ -483,7 +485,6 @@ img {
     --indent: 30px;
     --items: 3;
 }
-
 
 .portfolio-title {
     color: var(--secondary-txt-cl);
