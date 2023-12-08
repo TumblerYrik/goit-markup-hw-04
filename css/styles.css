@@ -5,21 +5,14 @@
     --accent-cl: #2196f3;
     --main-txt-cl: #757575;
     --secondary-txt-cl: #212121;
-    --footer-txt-cl: rgba(255, 255, 255, 0.6);
-    --spare-txt-cl: #fff;
     /* bacgraund-colors */
     --darc-bg-cl: #2f303a;
     --main-bg-cl: #fff;
     --secondary-bg-cl: #f5f4fa;
-    --accent-bg-cl: #2196f3;
     /* grid items */
     --items: 1;
     --indent: 30px;
-    /* градієнт */
-    --start-color: #c4c4c4;
-    --end-color: #2f303a66 -40;
 }
-
 body {
     color: var(--main-txt-cl);
     font-family: var(--main-font);
@@ -50,6 +43,10 @@ img {
     max-width: 100%;
     height: auto;
 }
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
 .container {
     /* outline: 1px solid red; */
@@ -68,14 +65,33 @@ img {
 
 .link {
     text-decoration: none;
-    color: currentColor;
 }
 
 .link:hover,
 .link:focus {
-    color: #2196f3;
+    color: #2196F3;
 }
 
+/* логічний заголовок */
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+/*  
+    |=============================
+    | Сітка для колекції з елементов 
+    |=================================
+*/
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -84,16 +100,17 @@ img {
 }
 
 .grid-item {
-    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+    flex-basis: calc(100%-var(--indent) * (var(--items) - 1)) / var(--items);
 }
 
-/* =====================
-        = header section =
-    ========================= */
+/* 
+|=====================
+|  = header section =
+======================
+*/
 .header {
-    padding: 32px, 15px, 32px, 15px;
-    background: #fff;
-    border-bottom: 1px solid #ececec;
+    background: var(--main-bg-cl);
+    border-bottom: 1px solid #ECECEC;
 }
 
 .heder-container {
@@ -114,11 +131,9 @@ img {
 }
 
 .navigation-item {
-    margin-top: 32px;
     margin-right: 50px;
-    margin-bottom: 32px;
-    margin-left: 0;
 }
+
 
 .navigation-item:last-child {
     margin-right: 0;
@@ -127,7 +142,7 @@ img {
 .logo {
     margin-right: 93px;
     color: var(--accent-cl);
-    font-family: Raleway;
+    font-family: var(--secondary-font);
     font-size: 26px;
     font-weight: 700;
     letter-spacing: 0.78px;
@@ -135,7 +150,7 @@ img {
 
 .logo-part {
     color: var(--secondary-txt-cl);
-    font-family: Raleway;
+    font-family: var(--secondary-font);
     font-size: 26px;
     font-weight: 700;
     letter-spacing: 0.78px;
@@ -143,15 +158,19 @@ img {
 
 .nav-link {
     display: block;
-    color: #212121;
-    font-family: Roboto;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: var(--secondary-txt-cl);
+    font-family: var(--main-font);
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.28px;
 }
 
 .nav-title {
-    color: #2196f3;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: var(--accent-cl);
     font-family: var(--main-font);
     font-size: 14px;
     font-weight: 500;
@@ -161,6 +180,10 @@ img {
 .header-grup {
     display: flex;
     margin-left: auto;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 0;
 }
 
 .header-grup-item {
@@ -203,22 +226,12 @@ img {
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-color: #c4c4c4;
-}
-
-.overlay {
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: linear-gradient(to right,
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url(../images/hero/Img.jpg);
+    background-color: var(--darc-bg-cl);
 }
 
 .title {
     width: 696px;
-    color: var(--spare-txt-cl);
+    color: #FFF;
     text-align: center;
     font-family: var(--main-font);
     font-size: 44px;
@@ -231,14 +244,14 @@ img {
 }
 
 .btn {
-    background-color: var(--accent-bg-cl);
+    background-color: #2196F3;
     min-width: 152px;
     min-height: 30px;
     width: 200px;
     height: 50px;
     flex-shrink: 0;
     padding: 10px, 32px;
-    color: var(--spare-txt-cl);
+    color: #FFF;
     text-align: center;
     font-size: 16px;
     font-weight: 700;
@@ -254,31 +267,28 @@ img {
 .btn:hover,
 .btn:focus {
     border-radius: 4px;
-    background-color: var(--accent-bg-cl);
+    background-color: var();
 }
 
 /* ======================
 ==  section Feature
 ========================*/
 .feature {
-    padding-top: 94px;
-    padding-bottom: 94px;
     background-color: var(--main-bg-cl);
-}
-
-.feature-container {
-    display: flex;
-    align-items: center;
+    padding-bottom: 0;
 }
 
 .feature-list {
     display: flex;
     align-items: center;
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .feature-item {
     margin-right: 30px;
+    width: 270px;
+    flex-shrink: 0;
 }
 
 .feature-item:last-child {
@@ -286,6 +296,7 @@ img {
 }
 
 .feature-subtitle {
+    margin-bottom: 10px;
     color: var(--secondary-txt-cl);
     font-family: var(--main-txt-cl);
     font-size: 14px;
@@ -308,15 +319,7 @@ img {
 ==section Services      
 ========================== */
 .services {
-    padding-top: 94px;
-    padding-bottom: 94px;
     background-color: var(--main-bg-cl);
-}
-
-.services-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }
 
 .title-services {
@@ -334,10 +337,15 @@ img {
     display: flex;
     align-items: center;
     flex-direction: row;
+    margin: 0;
+    padding: 0;
 }
 
 .item-services {
     margin-right: 30px;
+    width: 370px;
+    height: 294px;
+    flex-shrink: 0;
 }
 
 .item-services:last-child {
@@ -348,15 +356,7 @@ img {
 ==section Our team      
 ========================= */
 .team {
-    padding-top: 94px;
-    padding-bottom: 94px;
     background-color: var(--secondary-bg-cl);
-}
-
-.team-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }
 
 .title-team {
@@ -373,6 +373,8 @@ img {
     display: flex;
     align-items: center;
     flex-direction: row;
+    margin: 0;
+    padding: 0;
 }
 
 .item-team {
@@ -382,9 +384,12 @@ img {
 .item-team:last-child {
     margin-right: 0;
 }
+.blok-team {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 
 .subtitle-team {
-    margin-top: 30px;
     margin-bottom: 10px;
     color: var(--secondary-txt-cl);
     text-align: center;
@@ -403,28 +408,21 @@ img {
     letter-spacing: 0.48px;
 }
 
-/* 
-|===========================
-|== section Portfolio        
-|===========================
-*/
+/* ===========================
+== section Portfolio        
+=============================*/
 .portfolio {
-    padding-top: 94px;
-    padding-bottom: 94px;
     background-color: var(--main-bg-cl);
 }
 
-.portfolio-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
 .portfolio-list {
-    margin: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 50px;
     padding: 0;
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
 .portfolio-item {
@@ -436,6 +434,10 @@ img {
 }
 
 .portfolio-all-btn {
+    padding-top: 6px;
+    padding-right: 25px;
+    padding-bottom: 6.5px;
+    padding-left: 25px;
     text-align: center;
     font-family: var(--main-font);
     font-size: 16px;
@@ -445,20 +447,24 @@ img {
     width: 73px;
     height: 38px;
     border-radius: 4px;
-    background-color: var(--accent-bg-cl);
-    color: var(--spare-txt-cl);
+    background: #2196F3;
+    color: #FFF;
 }
 
 .portfolio-all-btn:hover,
 .portfolio-all-btn:focus {
     border-radius: 4px;
-    background-color: var(--accent-bg-cl);
+    background: #2196F3;
     width: 73px;
     height: 38px;
     flex-shrink: 0;
 }
 
 .portfolio-btn {
+    padding-top: 6px;
+    padding-right: 22px;
+    padding-bottom: 6px;
+    padding-left: 22px;
     color: var(--secondary-txt-cl);
     text-align: center;
     font-family: var(--main-font);
@@ -467,25 +473,38 @@ img {
     line-height: 1.62;
     letter-spacing: 0.48px;
     border-radius: 4px;
-    background-color: var(--main-bg-cl);
+    background-color: var(--secondary-bg-cl);
 }
 
 .portfolio-btn:hover,
 .portfolio-btn:focus {
     border-radius: 4px;
-    background: var(--secondary-bg-cl);
+    color: var(--secondary-bg-cl);
+    background: var(--accent-cl);
 }
 
 .img-portfolio-list {
-    margin-top: 56px;
-    --indent: 30px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .img-portfolio-item {
-    --indent: 30px;
+    width: 370px;
     --items: 3;
 }
 
+.portfolio-blok {
+    padding-top: 20px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    border-bottom: 1px solid #EEE;
+    border-right: solid #EEE;
+    border-left: solid #EEE;
+}
 .portfolio-title {
     color: var(--secondary-txt-cl);
     font-family: var(--main-font);
@@ -496,6 +515,7 @@ img {
 }
 
 .portfolio-desc {
+    margin-top: 4px;
     color: var(--main-txt-cl);
     font-family: var(--main-font);
     font-size: 16px;
@@ -504,11 +524,9 @@ img {
     letter-spacing: 0.48px;
 }
 
-/* 
-    |======================
-    |  footer         
-    |======================
-*/
+/* ======================
+======footer         
+----------------------- */
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -521,8 +539,9 @@ img {
 }
 
 .address-desc {
-    color: var(--spare-txt-cl);
-    font-family: Roboto;
+    margin-bottom: 10px;
+    color: #FFF;
+    font-family: var(--main-font);
     font-size: 14px;
     font-weight: 400;
     line-height: 1.71;
@@ -531,7 +550,7 @@ img {
 }
 
 .footer-link {
-    color: var(--footer-txt-cl);
+    color: rgba(255, 255, 255, 0.60);
     font-family: var(--main-font);
     font-size: 14px;
     font-weight: 400;
@@ -550,7 +569,7 @@ img {
 }
 
 .footer-logo-part {
-    color: var(--spare-txt-cl);
+    color: #FFF;
     font-family: var(--secondary-font);
     font-size: 26px;
     font-weight: 700;
@@ -558,7 +577,15 @@ img {
 }
 
 .footer-list {
+    margin-top: 0;
+    margin-bottom: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
+}
+.footer-item {
+    margin-bottom: 10px;
+}
+.footer-item:last-child {
+    margin-bottom: 0;
 }
