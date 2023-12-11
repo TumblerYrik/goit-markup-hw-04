@@ -302,23 +302,21 @@ img {
     padding-bottom: 0;
 }
 
-.feature-icon-list {
+.feature-container {
     display: flex;
     align-items: center;
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
 }
 
-.feature-icon-item {
+.feature-rectangle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: #F5F4FA;
+    width: 270px;
+    height: 120px;
     margin-right: 30px;
     margin-bottom: 30px;
-}
-
-.rectangle {
-    border-radius: 4px;
-    border-color: #F5F4FA;
-    background: #F5F4FA;
 }
 
 .feature-icon-item:last-child {
@@ -469,7 +467,7 @@ img {
 }
 
 .desc-team {
-    margin-bottom: 28px;
+    margin-bottom: 16px;
     color: var(--main-txt-cl);
     text-align: center;
     font-family: var(--main-font);
@@ -502,7 +500,8 @@ img {
     fill: #AFB1B8;
 }
 
-.socials-link:hover {
+.socials-link:hover,
+.socials-link:focus {
     background-color: #2196F3;
 }
 
@@ -585,7 +584,10 @@ img {
 .portfolio-btn:focus {
     border-radius: 4px;
     color: var(--secondary-bg-cl);
-    background: var(--accent-cl);
+    background-color: var(--accent-cl);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.08),
+        0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 
 .img-portfolio-list {
@@ -596,10 +598,8 @@ img {
     flex-wrap: wrap;
 }
 
-.container-bg:hover,
-.container-bg:focus {
-    border: 1px solid #EEE;
-    background: #FFF;
+.blok-link:hover,
+.blok-link:focus {
     box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
         0px 4px 4px 0px rgba(0, 0, 0, 0.06),
         0px 1px 1px 0px rgba(0, 0, 0, 0.12);
@@ -691,8 +691,8 @@ img {
     fill: #AFB1B8;
 }
 
-.clients-link:focus,
-.clients-link:hover .clients-icon {
+.clients-link:hover,
+.clients-link:focus .clients-icon {
     fill: var(--accent-cl);
 }
 
@@ -708,6 +708,11 @@ img {
 .footer-container {
     display: flex;
     align-items: baseline;
+}
+
+.footer-desc {
+    display: flex;
+    flex-direction: column;
 }
 
 .address {
@@ -776,11 +781,8 @@ img {
     display: flex;
     align-items: baseline;
     flex-direction: column;
-    margin-top: 0;
     margin-right: auto;
-    margin-bottom: 0;
     margin-left: 70px;
-    padding: 0;
 }
 
 .socials-list {
