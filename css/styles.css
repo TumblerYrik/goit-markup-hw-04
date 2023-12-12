@@ -565,6 +565,7 @@ img {
 }
 
 .portfolio-btn {
+    display: block;
     padding-top: 6px;
     padding-right: 22px;
     padding-bottom: 6px;
@@ -596,6 +597,9 @@ img {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+}
+.blok-link {
+    display: block;
 }
 
 .blok-link:hover,
@@ -798,9 +802,9 @@ img {
     justify-content: center;
     width: 44px;
     height: 44px;
-    background-color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.10); 
     border-radius: 50%;
-    fill: #AFB1B8;
+    fill: #FFFFFF
 }
 
 .socials-desk {
