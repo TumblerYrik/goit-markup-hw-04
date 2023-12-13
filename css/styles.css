@@ -97,7 +97,6 @@ img {
 .grid {
     display: flex;
     flex-wrap: wrap;
-
     gap: var(--indent);
 }
 
@@ -479,7 +478,6 @@ img {
 .socials-list {
     justify-content: center;
 }
-
 
 .socials-item {
     margin-right: 10px;
